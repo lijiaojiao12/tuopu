@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/animate.css">
+	<style>
+		html,body{
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+		}
+		ol,ul,li{
+			list-style: none;
+		}
+		.box{
+			width:100%;
+			height: 100%;
+			background: url(images/bg.jpg) no-repeat;
+			background-size: 100% 100%;
+			/* border-top: 5px solid #01ceff; */
+		}
+		.head{
+			width: 100%;
+			height:8px;
+			background: url(images/tiao.png) repeat-x;
+		}
+		.box .dao{
+			width: 100%;
+			margin-left: 63px;
+			margin-top: -5px;
+		}
+		.dao li{
+			float: left;
+			margin-left: 5px;
+			width: 120px;
+			height: 40px;
+			text-align: center;
+			line-height: 40px;
+			background: url(images/1.png) no-repeat;
+			background-size: 100% 100%; 
+			
+		}
+		.dao li a{
+			color: #fff;
+			font-size: 12px;
+		}
+		.yuan1{
+			width: 100%;
+			height: 150px;
+			overflow: hidden;
+		}
+		.yuan1 p{
+			width: 80px;
+			height: 80px;
+			background: url(images/navbackground.png) no-repeat;
+			background-size: 100% 100%;
+			text-align: center;
+			line-height: 80px;
+			color: #fff;
+			margin-top:40px;
+			margin-left: 25px;
+			letter-spacing:0px;
+			position: relative;
+			
+		}
+		.yuan1 .ditu{
+			width: 100px;
+			height: 100px;
+			position: absolute;
+			top: 72px;
+			left: 14px;
+			-webkit-animation:small 2s linear infinite;
+		}
+		.yuan1 .ditu img{
+			width: 100%;
+			height: 100%;
+		}
+		.yuan1 .bgtu{
+			width: 90px;
+			height: 90px;
+			position: absolute;
+			top: 78px;
+			left:20px;
+			-webkit-animation:big 2s linear infinite;
+		}
+		.yuan1 .bgtu img{
+			width: 100%;
+			height: 100%;
+		}
+		@-webkit-keyframes small{
+			0%{
+				-webkit-transform:rotate(0);
+			}
+			100%{
+				-webkit-transform:rotate(360deg);
+			}
+		}
+
+		@-webkit-keyframes big{
+			0%{
+				-webkit-transform:rotate(0);
+			}
+			100%{
+				-webkit-transform:rotate(-360deg);
+			}
+		}
+		.main{
+			width: 100%;
+			height:400px;
+			/* display: -webkit-box; */
+		}
+		.left{
+			width:370px;
+			height: 370px;
+			background: url(images/left.png) no-repeat;
+			background-size: 100% 100%;
+			margin-left: 18px;
+			opacity: 0;
+			float: left;
+		}
+		.left h3{
+			margin-left:50px;
+			margin-top: 12px;
+			color: #2e342c;
+			font-size: 14px;
+			font-weight: bold;
+		}
+		.left h4{
+			color: #fff;
+			margin-top: 20px;
+			margin-left:75px;
+			font-size: 12px;
+			background: url(images/xiala.png) no-repeat;
+			background-size: 100% 100%;
+			width: 240px;
+			height: 28px;
+			line-height: 28px;
+			padding-left: 10px;
+		}
+		.left p{
+			margin-left: 75px;
+			line-height:40px;
+			color: #fff;
+			font-size: 12px;
+			background: url(images/biao.png) no-repeat;
+			background-size: 100% 100%;
+			width: 240px;
+			height: 22px;
+			line-height: 22px;
+			padding-left: 24px;
+			cursor: pointer;
+		}
+		.left .a{
+			margin-top: 20px;
+		}
+		.left ul{
+			margin-top: 10px;
+			margin-left: 85px;
+			
+		}
+		.left ul li{
+			color:#fff;
+			background: url(images/biao1.png) no-repeat;
+			background-size: 100% 100%;
+			width: 220px;
+			height: 20px;
+			line-height: 20px;
+			padding-left: 22px;
+			overflow: hidden;
+			float: left;
+
+		}
+		.yi{
+			height: 170px;
+		}
+
+		.er{
+			height: 90px;
+		}
+
+		.middle{
+			width: 365px;
+			height: 229px;
+			background: url(images/alertbox.png) no-repeat;
+			background-size: 100% 100%;
+			margin-left: 105px;
+			margin-top: 85px;
+			float: left;
+			
+		}
+		.middle h3{
+			margin-left:40px;
+			margin-top: 20px;
+			color: #000;
+			font-size: 14px;
+			font-weight: bold;
+		}
+		.middle .fen{
+			margin-top: 45px;
+			margin-left: 65px;
+			color: #fff;
+			font-size: 16px;
+		}
+		.middle .pei{
+			margin-top: 10px;
+			margin-left: 65px;
+			color: #fff;
+			font-size: 16px;
+		}
+		.middle button{
+			width: 80px;
+			height: 30px;
+			line-height: 30px;
+			text-align: center;
+			background: url(images/anniu.png) no-repeat;
+			background-size: 100% 100%;
+			border: none;
+			outline: none;
+			color: #fff;
+			font-weight: bold;
+		}
+		.tt{
+			margin-left: 95px;
+			margin-top: 25px;
+		}
+		.ff{
+			margin-left: 25px;
+		}
+		.right{
+			width:350px;
+			height: 400px;
+			background: url(images/right.png) no-repeat;
+			background-size: 100% 100%;
+			overflow: hidden;
+			margin-left: 135px;
+			position: absolute;
+			right: 0;
+			float: left;
+		}
+		.right ul{
+			margin-left: 55px;
+			margin-top: 13px;
+		}
+		.right ul li{
+			float: left;
+			width: 80px;
+			text-align: center;
+			margin-left: 25px;
+		}
+		.right ul li a{
+			color: #fff;
+			font-size: 12px;	
+		}
+		.right ul li:last-child{
+			margin-left: 55px;
+		}
+		.right .mian{
+			margin-left: 55px;
+			margin-top: 40px;
+		}
+		.right .mian p{
+			line-height: 20px;
+			color: #fff;
+		}
+		.footer{
+			height:164px;
+			position: relative;
+			padding-left: 45px;
+		}
+		.footer ol{
+			margin-left: 255px;
+		}
+		.footer ol li{
+			float:left;
+			width:50px;
+			height:50px;
+			background: url(images/bottombox.png)no-repeat;
+			background-size: 100% 100%;
+			margin-right: 25px;
+		}
+		.footer p{	
+			position: absolute;
+			clear: both;
+			width:90px;
+			height: 90px;
+			background: url(images/6.png);
+			background-size: 100% 100%;
+			right:208px;
+			bottom:108px;
+		}
+		.footer p a{
+			position: absolute;
+			color: #fff;
+			font-size: 14px;
+			font-weight: bold;
+			text-align: center;
+			line-height: 20px;
+			display: inline-block;
+			width:54px;
+			height: 50px;
+			right:14px;
+			bottom:15px;
+			letter-spacing: 5px;
+			/* https://github.com/lijiaojiao12/14079D.git */
+		}
+		
+		
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div class="head"></div>
+		<ul class="dao">
+			<li><a href="#">首页</a></li>
+			<li><a href="#">任务列表</a></li>
+			<li><a href="#">资产发现</a></li>
+			<li><a href="#">个人账户</a></li>
+			<li><a href="#">报告</a></li>
+			<li><a href="#">修复</a></li>
+			<li><a href="#">网络拓补</a></li>
+			<li><a href="#">日志管理</a></li>
+			<li><a href="#">设置</a></li>
+			<li><a href="#">工控管理</a></li>
+		</ul>
+		<div class="yuan1">
+			<img src="images/navbig.png" class="ditu" alt="">
+			<img src="images/navsmall.png" class="bgtu" alt="">
+			<p>导航</p>
+		</div>
+		<div class="main">
+			<div class="left">
+				<h3>拓补导航</h3>
+				<h4>下拉内容</h4>
+				<p class="a">设备树</p>
+				<ul class="xia yi">
+					<li>huaweu-s5700:Eth-Trunk1 <--> Summit</li>
+					<li>huaweu-s5700:Eth-Trunk1 <--> Summit</li>
+					<li>huaweu-s5700:Eth-Trunk1 <--> Summit</li>
+					<li>huaweu-s5700:Eth-Trunk1 <--> Summit</li>
+					<li>huaweu-s5700:Eth-Trunk1 <--> Summit</li>
+					<li>huaweu-s5700:Eth-Trunk1 <--> Summit</li>
+					<li>huaweu-s5700:Eth-Trunk1 <--> Summit</li>
+					<li>huaweu-s5700:Eth-Trunk1 <--> Summit</li>
+				</ul>
+				<p class="b">设备树</p>
+				<ul class="xia er">
+					<li>设备树11</li>
+					<li>设备树12</li>
+					<li>设备树13</li>
+					<li>设备树14</li>
+					
+				</ul>
+				<p class="c">设备树</p>
+				<ul class="xia san">
+					<li>设备树21</li>
+					<li>设备树22</li>
+					<li>设备树23</li>
+					<li>设备树24</li>
+					<li>设备树25</li>
+				</ul>
+			</div>
+
+			<div class="middle">
+				<h3>弹出框名字</h3>
+				<p class="fen">ACL分析：<input type="radio"> 是 <input type="radio"> 否</p>
+				<p class="pei">是否重新导入配置文件：<input type="radio"> 是 <input type="radio"> 否</p>
+				<button class="tt">确认</button>
+				<button class="ff">取消</button>
+			</div>
+
+			<div class="right animated fadeInRight">
+				<ul>
+					<li><a href="#">属性面板</a></li>
+					<li><a href="#">流信息面板</a></li>
+				</ul>
+				<div class="mian">
+					<p>链路：huawei-s5700:GigabitEthernet0//0/6<-->10.99.1.254:N/A</p>
+					<p>数据来源：arp_engine</p>
+					<p>源接口：huawei-s5700</p>
+					<p>源iP地址：N/A</p>
+					<p>接口描述：</p>
+					<p>___________</p>
+					<p>目的设备：10.99.1.254</p>
+					<p>目的子网掩码：N/A</p>
+					<p>目的接口描述:</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="footer">
+			<ol>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ol>
+			<p><a href="#">快捷工具</a></p>
+		</div>
+	</div>
+	
+</body>
+</html>
+<script src="js/jquery.2.1.4.min.js"></script>
+<script>
+	$('.xia').hide();
+	$('.left p').on('click',function(){
+			$(this).next().slideToggle();
+
+	})
+	$('.yuan1 p').on('click',function(){
+		$('.left').css({
+			"opacity":"1"
+		})
+	})
+</script>
